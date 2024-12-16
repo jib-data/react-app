@@ -1,7 +1,7 @@
-const Comment = (props) => {
+const Comment = ({ comments }) => {
   return (
     <>
-      {props.comments.map((comment) => (
+      {comments.map((comment) => (
         <div key={comment.commentId}>
           <p>{comment.text}</p>
         </div>
