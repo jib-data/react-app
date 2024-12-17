@@ -1,13 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Comment from "./Comment";
+import Post from "./Post";
+import Form from "./Form";
 
 const AxiosDemo = () => {
   let [data, setData] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/")
+      .get("http://localhost:8000/posts")
       .then((response) => {
         console.log(response.data);
         setData(response.data);
@@ -17,7 +18,12 @@ const AxiosDemo = () => {
       });
   }, []);
 
-  return <Comment comments={data} />;
+  return (
+    <>
+      <Form />
+      <Post posts={data} />
+    </>
+  );
 };
 
 export default AxiosDemo;

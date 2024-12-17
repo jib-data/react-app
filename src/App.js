@@ -1,16 +1,14 @@
 import "./App.css";
+import AxiosDemo from "./AxiosAssignment/AxiosDemo";
+
 import Header from "./Header";
-import Footer from "./Footer";
-import Body from "./Body";
+import ToDoContainer from "./Todo.js/ToDoContainer";
 
 function App() {
-  const name = "Jibril";
   return (
     <div className="App">
       <Header />
-      <Body name={name} />
-
-      <Footer />
+      <ToDoContainer />
     </div>
   );
 }
